@@ -1,5 +1,5 @@
 import React, { createContext, useReducer } from 'react';
-import { reducer } from "../Reducer/todo.reducer";
+import { reducer } from "../Reducer/Reducer";
 
 const defaultTodos = [
     { id: '0', task: 'Learn Typescript', done: false },
@@ -10,12 +10,12 @@ const defaultTodos = [
 export const TodoContext = createContext();
 export const DispatchContext = createContext();
 
-export const TodoProvider = ({ children }) => {
+export function TodoProvider(props) {
     const [todos, dispatch] = useReducer(reducer, defaultTodos);
-    return (
 
-        <TodoContext.Provider value={todos}>{children}
-            <DispatchContext.Provider value={dispatch}>{children}</DispatchContext.Provider>
+    return (
+        <TodoContext.Provider value={todos}>
+            <DispatchContext.Provider value={dispatch}>{props.children}</DispatchContext.Provider>
         </TodoContext.Provider>
     );
 };
