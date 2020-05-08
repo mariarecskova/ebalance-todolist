@@ -1,4 +1,5 @@
 .todo-container {
+  justify-content: space-between;
   background-color: white;
   text-align: left;
   width: 70%;
@@ -13,8 +14,25 @@
 li {
   background: #f5f5f5;
   width: 100%;
+  padding: 5px;
 }
 li:nth-child(odd) {
   background: white;
   width: 100%;
+}
+
+.todo-bin {
+  height: 20px;
+  text-align: right;
+  width: 20px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  background-image: url("../Images/trash1.svg");
+  position: absolute;
+  background-color: Transparent;
+  border: none;
+  margin-left: 50px;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
 }

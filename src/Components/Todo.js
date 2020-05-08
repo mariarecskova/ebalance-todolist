@@ -7,25 +7,27 @@ function Todo({ id, task, completed }) {
     const dispatch = useContext(DispatchContext);
 
     return (
-        <li
+        <li className="todo-item"
             onClick={() => dispatch({ type: TOGGLE_TODO, id })}
         >
+
             <span
                 style={{
                     textDecoration: completed ? 'line-through' : '',
                     color: completed ? '#3CB371' : '#141414'
+
                 }}
             >
                 {task}
             </span>
-            <div className={"todo-bin"}>
-                <img
-                    onClick={e => {
-                        e.stopPropagation();
-                        dispatch({ type: DELETE_TODO, id });
-                    }}
-                />
-            </div>
+            <button className="todo-bin"
+                onClick={event => {
+                    event.stopPropagation();
+                    dispatch({ type: DELETE_TODO, id });
+                }}
+            >
+            </button>
+
         </li>
     );
 }

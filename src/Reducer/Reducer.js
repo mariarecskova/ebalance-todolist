@@ -1,4 +1,4 @@
-import { ADD_TODO, DELETE_TODO, TOGGLE_TODO } from "../Constant/Actions";
+import { ADD_TODO, DELETE_TODO, TOGGLE_TODO, DELETE_ALL } from "../Constant/Actions";
 import { uuid } from 'uuidv4';
 
 export function reducer(state, action) {
@@ -14,6 +14,9 @@ export function reducer(state, action) {
             );
         case DELETE_TODO:
             return state.filter(todo => todo.id !== action.id);
+
+        // case DELETE_ALL:
+        //     return state.filter(todos => todos !== action)
         default:
             return state;
     }
