@@ -1,6 +1,7 @@
 import React, { useContext, memo } from 'react';
 import { DispatchContext } from '../Context/Context';
 import { DELETE_TODO, TOGGLE_TODO } from '../Constant/Actions';
+import "../Styles/Todo.css"
 
 function Todo({ id, task, completed }) {
     const dispatch = useContext(DispatchContext);

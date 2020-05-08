@@ -1,0 +1,20 @@
+.todo-container {
+  background-color: white;
+  text-align: left;
+  width: 70%;
+  height: fit-content;
+  box-shadow: 1px 1px 5px 0px #787678;
+  border-radius: 10px;
+  font-size: 14px;
+  margin: 50px 165px;
+  padding: 10px;
+}
+
+li {
+  background: #f5f5f5;
+  width: 100%;
+}
+li:nth-child(odd) {
+  background: white;
+  width: 100%;
+}

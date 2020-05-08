@@ -1,17 +1,18 @@
 .App {
   text-align: center;
   background-color: #e5e5e5;
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
 .App-header {
-  font-size: 3em;
+  font-size: 2em;
   color: #404040;
   text-align: center;
   font-weight: 600;
+  margin: 30px;
 }
